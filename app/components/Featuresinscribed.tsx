@@ -52,10 +52,8 @@ const FeaturedProperties = () => {
 
       {/* Section Acheter, Louer, Déposer un bien */}
       <div className="mt-10 mb-10">
-  <h3 className="text-4xl font-bold text-center text-gray-800 mb-10">
-    Options disponibles
-  </h3>
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
+  
+  <div className=" sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
     {[
       {
         title: 'Chercher un bien',
@@ -65,14 +63,7 @@ const FeaturedProperties = () => {
         link: `/properties`,
         imageUrl: '/images/autres/achat.jpg',
       },
-      {
-        title: 'Déposer un bien',
-        description:
-          'Nous vous accompagnons dans chaque étape pour vendre votre maison facilement et efficacement.',
-        buttonText: 'Déposer',
-        link: '/depot',
-        imageUrl: '/images/autres/depot.jpg',
-      },
+      
     ].map((option, index) => (
       <div
         key={index}

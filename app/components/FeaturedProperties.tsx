@@ -69,7 +69,7 @@ const FeaturedProperties = () => {
         description:
           'Nous vous accompagnons dans chaque étape pour vendre votre maison facilement et efficacement.',
         buttonText: 'Déposer',
-        link: '/submit-property',
+        link: '/depot',
         imageUrl: '/images/autres/depot.jpg',
       },
     ].map((option, index) => (
