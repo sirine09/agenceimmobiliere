@@ -8,7 +8,7 @@ const AboutPage = () => (
     <Header />
     <main className="container mx-auto p-6">
       <FeaturedProperties/>
-     
+         
     </main>
     <Footer />
   </div>
