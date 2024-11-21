@@ -53,6 +53,20 @@ const FeaturedProperties = () => {
       {/* Section Acheter, Louer, Déposer un bien */}
       <div className="mt-10 mb-10">
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   <div className=" sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
     {[
       {
