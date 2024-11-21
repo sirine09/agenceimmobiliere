@@ -1,0 +1,46 @@
+/* Container styling for the banner */
+.banner {
+  background: linear-gradient(to right, #f7b742, #f54c21);; /* Orange gradient */
+  color: white;
+  padding: 24px;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.banner:hover {
+  transform: scale(1.02); /* Slight scaling effect on hover */
+}
+
+/* Title styling */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Text styling */
+.text {
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+/* Link button styling */
+.button {
+  background-color: white;
+  color: #f27405; /* Orange text color */
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: #f9a825; /* Lighter orange on hover */
+  color: white;
+}

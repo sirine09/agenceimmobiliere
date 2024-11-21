@@ -1,0 +1,16 @@
+/* Style pour les liens actifs */
+.active {
+  color: #f97316; /* Orange */
+  font-weight: bold; /* Gras */
+  text-decoration: underline; /* Souligné */
+}
+
+/* Style général pour les liens */
+.nav-link {
+  color: #555; /* Gris par défaut */
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #f97316; /* Orange au survol */
+}
