@@ -30,7 +30,7 @@ const PropertyCard = ({ id, title, imageUrl, price, location, rating = 4, type }
           />
         ))}
       </div>
-      <button className={styles.buttonBuyOrRent}>{type === 'buy' ? 'Buy' : 'Rent'}</button>
+      <button className={styles.buttonBuyOrRent}>{type === 'buy' ? 'Acheter' : 'Louer'}</button>
     </div>
   </Link>
 );

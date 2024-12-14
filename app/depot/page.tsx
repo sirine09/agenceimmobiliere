@@ -168,7 +168,7 @@ const SubmitProperty: React.FC = () => {
               type="text"
               name="contactPhone"
               required
-              pattern="[0-9]{10}"
+              pattern="[0-9]{8}"
               className="w-full p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               placeholder="Numéro de téléphone"
             />

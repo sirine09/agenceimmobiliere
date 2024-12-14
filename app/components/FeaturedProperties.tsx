@@ -11,23 +11,24 @@ enum PropertyType {
 const properties = [
   {
     id: '1',
-    title: 'Maison de luxe à Paris',
+    title: 'Villa jumelée en vente',
     imageUrl: '/images/properties/maisondeluxe.jpg',
     price: 950000,
-    location: 'Paris',
+    location: 'Kélibia, شارع الشهيد حمادي الغربي',
     rating: 5,
     type: PropertyType.Buy,
   },
   {
     id: '2',
-    title: 'Appartement en bord de Rhône',
+    title: 'S+1 en location',
     imageUrl: '/images/properties/appartement_lyon.jpg',
     price: 420000,
-    location: 'Lyon',
+    location: 'Tunis Ennasr - Ennasr 2',
     rating: 3,
     type: PropertyType.Rent,
   },
 ];
+
 
 const FeaturedProperties = () => {
   return (

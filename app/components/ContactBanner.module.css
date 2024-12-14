@@ -1,6 +1,6 @@
 /* Container styling for the banner */
 .banner {
-  background: linear-gradient(to right, #f7b742, #f54c21);; /* Orange gradient */
+  background: #ec8933; /* Orange gradient */
   color: white;
   padding: 24px;
   text-align: center;
@@ -41,6 +41,6 @@
 }
 
 .button:hover {
-  background-color: #f9a825; /* Lighter orange on hover */
+  background-color: #e15915; /* Lighter orange on hover */
   color: white;
 }

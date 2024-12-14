@@ -16,9 +16,9 @@ const AppointmentPage = () => {
 
   // Exemple de liste d'agents disponibles
   const agents = [
-    { id: 1, name: 'Agent 1' },
-    { id: 2, name: 'Agent 2' },
-    { id: 3, name: 'Agent 4' },
+    { id: 1, name: 'John Doe' },
+    { id: 2, name: 'Samuel Brown' },
+    { id: 3, name: 'Jane Smith' },
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

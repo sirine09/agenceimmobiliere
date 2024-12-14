@@ -37,7 +37,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 flex items-center justify-start w-full h-full">
         <div className="relative w-full h-full overflow-hidden">
           <div
-            className="absolute inset-0 w-full h-full bg-orange-500 opacity-40"
+            className="absolute inset-0 w-full h-full bg-orange-300 opacity-40"
             style={{
               clipPath: 'polygon(0 0, 60% 0, 40% 100%, 0 100%)',
             }}

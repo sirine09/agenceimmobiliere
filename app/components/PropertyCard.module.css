@@ -78,10 +78,10 @@
 
 /* Button "Buy or Rent" */
 .buttonBuyOrRent {
-  background-color: #f56623;
+  background: #f97316;;
   color: #fff;
   padding: 10px 24px;
-  border-radius: 24px;
+  border-radius: 8px;
   font-size: 0.875rem;
   font-weight: bold;
   text-align: center;
