@@ -1,10 +1,10 @@
 const properties = [
   {
-    id: '1',
+    id: 1,
     title: 'Villa jumelée en vente',
     imageUrl: '/images/properties/maisondeluxe.jpg',
     price: 950000,
-    location: 'Kélibia, شارع الشهيد حمادي الغربي',
+    location: 'Kelibia, شارع الشهيد حمادي الغربي',
     description: 'Superbe villa jumelée moderne avec vue sur la mer, parfaite pour une famille.',
     similarImages: [
       '/images/properties/maisondeluxe_1.jpg',
@@ -13,7 +13,7 @@ const properties = [
     ],
   },
   {
-    id: '2',
+    id: 2,
     title: 'S+1 en location',
     imageUrl: '/images/properties/appartement_lyon.jpg',
     price: 420000,
@@ -28,11 +28,11 @@ const properties = [
     ],
   },
   {
-    id: '3',
+    id: 3,
     title: 'Villa individuelle en vente',
     imageUrl: '/images/properties/villamoderne.jpg',
     price: 750000,
-    location: 'Kélibia, Kelibia la blanche',
+    location: 'Kelibia, Kelibia la blanche',
     description: 'Magnifique villa individuelle spacieuse avec un grand jardin, proche de la plage.',
     similarImages: [
       '/images/properties/villamoderne_1.jpg',
@@ -40,7 +40,7 @@ const properties = [
     ],
   },
   {
-    id: '4',
+    id: 4,
     title: 'S+4 en location',
     imageUrl: '/images/properties/maisondecompagne.jpg',
     price: 550000,
@@ -54,7 +54,7 @@ const properties = [
     ],
   },
   {
-    id: '5',
+    id: 5,
     title: 'S+2 en vente à Nabeul AFH',
     imageUrl: '/images/properties/studiomoderne.jpg',
     price: 220000,
@@ -68,11 +68,11 @@ const properties = [
     ],
   },
   {
-    id: '6',
+    id: 6,
     title: 'Duplex en vente',
     imageUrl: '/images/properties/chalet.avif',
     price: 680000,
-    location: 'Kélibia, Cité merdes',
+    location: 'Kelibia, Cité merdes',
     description: 'Duplex spacieux avec une décoration moderne, parfait pour les amateurs de luxe.',
     similarImages: [
       '/images/properties/chalet_1.avif',

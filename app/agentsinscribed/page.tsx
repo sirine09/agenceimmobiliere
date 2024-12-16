@@ -1,8 +1,8 @@
 "use client";
-
-import { useRouter } from 'next/navigation';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { useRouter } from "next/navigation";
+import { useFavorites } from "../context/FavoritesContext";
+import Header from "../components/Headerinscribed";
+import Footer from "../components/Footerinscribed";
 
 type AgentDetailProps = {
   id: number;
@@ -10,7 +10,6 @@ type AgentDetailProps = {
   profileImage: string;
   location: string;
   description: string;
-  contactLink: string;
 };
 
 const agentsData: AgentDetailProps[] = [
@@ -20,7 +19,6 @@ const agentsData: AgentDetailProps[] = [
     profileImage: "images/agents/agent1.jpg",
     location: "Nabeul, Tunis",
     description: "Agent immobilier expérimenté avec plus de 10 ans d'expérience dans la vente de propriétés.",
-    contactLink: "/contact-agent/1",
   },
   {
     id: 2,
@@ -28,7 +26,6 @@ const agentsData: AgentDetailProps[] = [
     profileImage: "images/agents/agent2.jpg",
     location: "Mahdia, Tunis",
     description: "Spécialiste en immobilier commercial avec une expertise dans la gestion de grands immeubles.",
-    contactLink: "/contact-agent/2",
   },
   {
     id: 3,
@@ -36,16 +33,27 @@ const agentsData: AgentDetailProps[] = [
     profileImage: "images/agents/agent3.jpg",
     location: "Sfax, Tunis",
     description: "Agent résidentiel spécialisé dans l'achat et la vente de maisons de luxe.",
-    contactLink: "/contact-agent/3",
   },
 ];
 
 const AgentPage = () => {
   const router = useRouter();
+  const { favorites, addToFavorites, removeFromFavorites, isFavorite } = useFavorites();
 
-  const handleConsultAgent = (contactLink: string) => {
-    // Redirige vers la page de contact spécifique de l'agent
-    router.push(contactLink);
+  const handleConsultAgent = () => {
+    if (router) {
+      router.push('/Mesenger');
+    } else {
+      console.error('Router est undefined');
+    }
+  };
+
+  const toggleFavorite = (id: number) => {
+    if (isFavorite(id)) {
+      removeFromFavorites(id);
+    } else {
+      addToFavorites(id);
+    }
   };
 
   return (
@@ -54,12 +62,20 @@ const AgentPage = () => {
       <main className="container mx-auto p-6">
         <h1 className="text-3xl font-bold text-center text-orange-600 mb-8">Nos Agents</h1>
         
-        {/* Liste des agents */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {agentsData.map((agent) => (
-            <div key={agent.id} className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div key={agent.id} className="bg-white shadow-lg rounded-lg overflow-hidden relative">
+              {/* Cœur favori */}
+              <button
+                onClick={() => toggleFavorite(agent.id)}
+                className={`absolute top-4 right-4 text-lg cursor-pointer transition ${
+                  isFavorite(agent.id) ? "text-red-500" : "text-gray-400"
+                }`}
+              >
+                {isFavorite(agent.id) ? "❤️" : "🤍"}
+              </button>
+              
               <div className="flex items-center p-4">
-                {/* Image de profil circulaire à côté du nom */}
                 <img
                   src={agent.profileImage}
                   alt={`Image de profil de ${agent.name}`}
@@ -74,7 +90,7 @@ const AgentPage = () => {
                 <p className="text-sm text-gray-700 mt-2">{agent.description}</p>
                 <div className="mt-4">
                   <button
-                    onClick={() => handleConsultAgent(agent.contactLink)}
+                    onClick={handleConsultAgent}
                     className="inline-block px-6 py-2 text-white bg-orange-500 hover:bg-orange-600 rounded-full transition-all"
                   >
                     Consulter l'agent

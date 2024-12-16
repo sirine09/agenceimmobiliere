@@ -2,10 +2,9 @@
 "use client";
 
 import { useRouter } from 'next/navigation';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import PropertyList from '../components/PropertyList';
-
+import Header from '../components/Headerinscribed';
+import Footer from '../components/Footerinscribed';
+import  PropertyList from '../components/PropertyListinscribed'; 
 const PropertyPage = ({ params }: { params: { id: number } }) => {
   const router = useRouter();
   const { id } = params;

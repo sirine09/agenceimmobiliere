@@ -26,9 +26,6 @@ const Header = () => {
           <Link href="/agents" className={`${pathname === '/agents' ? 'text-orange-500 underline' : 'text-gray-700'}`}>
             Agents
           </Link>
-          <Link href="/about" className={`${pathname === '/about' ? 'text-orange-500 underline' : 'text-gray-700'}`}>
-            À propos
-          </Link>
           <Link href="/contact" className={`${pathname === '/contact' ? 'text-orange-500 underline' : 'text-gray-700'}`}>
             Contact
           </Link>

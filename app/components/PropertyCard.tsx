@@ -6,7 +6,7 @@ enum PropertyType {
 }
 
 type PropertyCardProps = {
-  id: string;
+  id: number;
   title: string;
   imageUrl: string;
   price: number;

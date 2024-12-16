@@ -1,51 +1,10 @@
-// 'use client'
-// import styles from './AboutContent.module.css';
-
-// const AboutSection = () => {
-//   // Fonction pour rediriger vers la page agents
-//   const handleRedirect = () => {
-//     window.location.href = '/agents'; // Redirection vers la page des agents
-//   };
-
-//   return (
-//     <div className={styles.container}>
-//       {/* Text section */}
-//       <div className={styles.textContainer}>
-//         <h2 className={styles.title}>À propos de notre agence</h2>
-//         <div className={styles.titleUnderline}></div>
-//         <p className={styles.text}>
-//           Notre agence immobilière est spécialisée dans la vente et la location de biens immobiliers de luxe.
-//           Depuis plus de 20 ans, nous accompagnons nos clients dans la recherche de leur maison de rêve.
-//         </p>
-//         <p className={styles.text}>
-//           Nous mettons à votre disposition une équipe de professionnels expérimentés pour vous guider tout au long du processus, de la recherche jusqu'à la signature.
-//         </p>
-
-//         {/* Bouton "Notre Groupe" */}
-//         <button onClick={handleRedirect} className={styles.groupButton}>
-//           Notre Groupe
-//         </button>
-//       </div>
-
-//       {/* Image grid */}
-//       <div className={styles.imageGrid}>
-//         <img src="images/properties/apropos1.jfif" alt="Property 1" className={styles.image} />
-//         <img src="images/properties/apropos2.jpg" alt="Property 2" className={styles.image} />
-//         <img src="images/properties/apropos3.jpg" alt="Property 3" className={styles.image} />
-//         <img src="images/properties/apropos4.jpg" alt="Property 4" className={styles.image} />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AboutSection;
 'use client';
 import styles from './AboutContent.module.css';
 
 const AboutSection = () => {
   // Fonction pour rediriger vers la page des agents
   const handleRedirect = () => {
-    window.location.href = '/agents'; // Redirection vers la page des agents
+    window.location.href = '/agentsinscribed'; // Redirection vers la page des agents
   };
 
   return (

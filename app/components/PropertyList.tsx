@@ -143,21 +143,21 @@ enum PropertyType {
   Rent = 'rent',
 }
 
-const PropertyList = ({ propertyId }: { propertyId: string }) => {
+const PropertyList = ({ propertyId }: { propertyId: number }) => {
   // Remplacer par des données réelles
   const properties = [
-    { id: '1', title: 'Villa jumelée en vente', imageUrl: '/images/properties/maisondeluxe.jpg', price: 950000, location: 'Kélibia, شارع الشهيد حمادي الغربي', rating: 5, type: PropertyType.Buy },
-    { id: '2', title: 'S+1 en location', imageUrl: '/images/properties/appartement_lyon.jpg', price: 420000, location: 'Tunis Ennasr - Ennasr 2', rating: 3, type: PropertyType.Rent },
-    { id: '3', title: 'Villa individuelle en vente', imageUrl: '/images/properties/villamoderne.jpg', price: 750000, location: 'Kélibia, Kelibia la blanche', rating: 4, type: PropertyType.Buy },
-    { id: '4', title: 'S+4 en location', imageUrl: '/images/properties/maisondecompagne.jpg', price: 550000, location: 'Les Berges Du Lac Tunis - Le Lac 2', rating: 5, type: PropertyType.Buy },
-    { id: '5', title: 'S+2 en vente à Nabeul AFH', imageUrl: '/images/properties/studiomoderne.jpg', price: 220000, location: 'Nabeul, Nabeul AFH', rating: 4, type: PropertyType.Rent },
-    { id: '6', title: 'Duplex en vente', imageUrl: '/images/properties/chalet.avif', price: 680000, location: 'Kélibia, Cité merdes', rating: 5, type: PropertyType.Buy },
+    { id: 1, title: 'Villa jumelée en vente', imageUrl: '/images/properties/maisondeluxe.jpg', price: 950000, location: 'Kelibia, شارع الشهيد حمادي الغربي', rating: 5, type: PropertyType.Buy },
+    { id: 2, title: 'S+1 en location', imageUrl: '/images/properties/appartement_lyon.jpg', price: 420000, location: 'Tunis Ennasr - Ennasr 2', rating: 3, type: PropertyType.Rent },
+    { id: 3, title: 'Villa individuelle en vente', imageUrl: '/images/properties/villamoderne.jpg', price: 750000, location: 'Kelibia, Kelibia la blanche', rating: 4, type: PropertyType.Buy },
+    { id: 4, title: 'S+4 en location', imageUrl: '/images/properties/maisondecompagne.jpg', price: 550000, location: 'Les Berges Du Lac Tunis - Le Lac 2', rating: 5, type: PropertyType.Buy },
+    { id: 5, title: 'S+2 en vente à Nabeul AFH', imageUrl: '/images/properties/studiomoderne.jpg', price: 220000, location: 'Nabeul, Nabeul AFH', rating: 4, type: PropertyType.Rent },
+    { id: 6, title: 'Duplex en vente', imageUrl: '/images/properties/chalet.avif', price: 680000, location: 'Kelibia, Cité merdes', rating: 5, type: PropertyType.Buy },
   ];
 
   // État pour les filtres
   const [searchTerm, setSearchTerm] = useState(''); // Terme de recherche
   const [filterType, setFilterType] = useState<'buy' | 'rent' | 'all'>('all');
-  const [minRating, setMinRating] = useState(0);
+  const [excludedRating, setExcludedRating] = useState<number | null>(null);
   const [minPrice, setMinPrice] = useState<number | ''>(''); 
   const [maxPrice, setMaxPrice] = useState<number | ''>('');
 
@@ -169,7 +169,7 @@ const PropertyList = ({ propertyId }: { propertyId: string }) => {
       : true;
     
     const matchesType = filterType === 'all' || property.type === filterType;
-    const matchesRating = property.rating >= minRating;
+    const matchesRating = excludedRating === null || property.rating === excludedRating;
     const matchesMinPrice = minPrice !== '' ? property.price >= minPrice : true;
     const matchesMaxPrice = maxPrice !== '' ? property.price <= maxPrice : true;
 
@@ -221,8 +221,8 @@ const PropertyList = ({ propertyId }: { propertyId: string }) => {
           <label htmlFor="rating" className="text-sm font-medium">Note :</label>
           <select
             id="rating"
-            onChange={(e) => setMinRating(Number(e.target.value))}
-            value={minRating}
+            onChange={(e) => setExcludedRating(Number(e.target.value))}
+            value={excludedRating ?? 0}
             className="bg-gray-200 p-2 rounded-md text-sm"
           >
             <option value={0}>Toutes</option>

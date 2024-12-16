@@ -10,16 +10,16 @@ enum PropertyType {
 // Propriétés en vedette
 const properties = [
   {
-    id: '1',
+    id: 1,
     title: 'Villa jumelée en vente',
     imageUrl: '/images/properties/maisondeluxe.jpg',
     price: 950000,
-    location: 'Kélibia, شارع الشهيد حمادي الغربي',
+    location: 'Kelibia, شارع الشهيد حمادي الغربي',
     rating: 5,
     type: PropertyType.Buy,
   },
   {
-    id: '2',
+    id: 2,
     title: 'S+1 en location',
     imageUrl: '/images/properties/appartement_lyon.jpg',
     price: 420000,
@@ -37,7 +37,7 @@ const FeaturedProperties = () => {
 
       <section className="p-6 mt-12">
         {/* Titre centré avec une police élégante et couleur personnalisée */}
-        <h2 className="text-3xl font-bold text-center text-gray-800
+        <h2 className="text-3xl font-bold text-center text-orange-600
          font-DancingScript mb-16 ">
           Exclusivités
         </h2>
@@ -52,7 +52,7 @@ const FeaturedProperties = () => {
 
       {/* Section Acheter, Louer, Déposer un bien */}
       <div className="mt-10">
-  <h3 className="text-4xl font-bold text-center text-gray-800 mb-10">
+  <h3 className="text-4xl font-bold text-center text-orange-600 mb-10">
     Options disponibles
   </h3>
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">

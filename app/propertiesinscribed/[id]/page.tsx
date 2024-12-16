@@ -1,8 +1,8 @@
 import properties from '../../data/properties';
-import PropertyDetail from '../../components/PropertyDetail';
+import PropertyDetail from '../../components/PropertyDetailinscribed';
 
 const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
-  const id = Number(params.id); // Assurez-vous que params est attendu.
+  const id = Number(params.id); // `await` n'est pas nécessaire ici car `params` n'est pas une promesse.
   const property = properties.find((p) => p.id === id);
 
   if (!property) {
@@ -14,6 +14,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
       </div>
     );
   }
+
   return (
     <div>
       <PropertyDetail

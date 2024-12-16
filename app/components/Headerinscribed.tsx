@@ -226,10 +226,10 @@ const Header = () => {
         {/* Navigation */}
         <nav className="flex space-x-6">
           {/* Existing navigation links remain the same */}
-          <Link href="/aboutinscribed" className={`${pathname === '/' ? 'text-orange-500 underline' : 'text-gray-700'}`}>Accueil</Link>
-          <Link href="/properties" className={`${pathname === '/properties' ? 'text-orange-500 underline' : 'text-gray-700'}`}>Propriétés</Link>
-          <Link href="/agents" className={`${pathname === '/agents' ? 'text-orange-500 underline' : 'text-gray-700'}`}>Agents</Link>
-          <Link href="/about" className={`${pathname === '/about' ? 'text-orange-500 underline' : 'text-gray-700'}`}>À propos</Link>
+          <Link href="/aboutinscribed" className={`${pathname === '/aboutinscribed' ? 'text-orange-500 underline' : 'text-gray-700'}`}>Accueil</Link>
+          <Link href="/propertiesinscribed" className={`${pathname === '/propertiesinscribed' ? 'text-orange-500 underline' : 'text-gray-700'}`}>Propriétés</Link>
+          <Link href="/agentsinscribed" className={`${pathname === '/agentsinscribed' ? 'text-orange-500 underline' : 'text-gray-700'}`}>Agents</Link>
+          
       
           {/* Notification and Avatar with Dropdown */}
           <div className="flex space-x-4 ml-auto">
@@ -278,8 +278,9 @@ const Header = () => {
               )}
             </div>
 
-            {/* Settings Icon */}
-            <Settings className="w-6 h-6 text-gray-700 hover:text-orange-500 cursor-pointer" />
+        <Link href="/parametres">
+        <Settings className="w-6 h-6 text-gray-700 hover:text-orange-500 cursor-pointer" />
+        </Link>
 
             {/* Avatar with Dropdown Menu */}
             <DropdownMenu>
@@ -300,13 +301,13 @@ const Header = () => {
                   <Link href="/profil_client?id=27" className="block text-gray-700">Mon profile</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Link href="/favorites" className="block text-gray-700">Mes Biens favoris</Link>
+                  <Link href="/favoritesbien" className="block text-gray-700">Mes Biens favoris</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Link href="/chat" className="block text-gray-700">Mes agents</Link>
+                  <Link href="/favoritesagent" className="block text-gray-700">Mes agents favoris</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Link href="/messenger/components" className="block text-gray-700">Messenger</Link>
+                  <Link href="/Mesenger" className="block text-gray-700">Messenger</Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>

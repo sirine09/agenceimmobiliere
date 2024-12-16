@@ -1,7 +1,7 @@
 // app/about/page.tsx
 import Header from '../components/Headerinscribed';
-import AboutContent from '../components/AboutSection';
-import Footer from '../components/Footer';
+import AboutContent from '../components/AboutSectioninscribed';
+import Footer from '../components/Footerinscribed';
 import FeaturedProperties from '../components/Featuresinscribed';
 import HeroSection from '../components/HeroSectioninscribed';
 

@@ -1,12 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useState , useRef,useEffect} from 'react';
 import { useRouter } from 'next/navigation';
 
 
 const HeroSection = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const router = useRouter();
+  const videoRef = useRef<HTMLVideoElement | null>(null); // Spécifiez le type de la référence vidéo
+  
 
   const handleSearch = () => {
     if (searchTerm.trim() !== '') {
@@ -24,6 +26,28 @@ const HeroSection = () => {
       handleSearch();
     }
   };
+  useEffect(() => {
+      const videoElement = videoRef.current;
+  
+      if (videoElement) {
+        const stopAtSecond = 64; // The second where you want to stop the video
+  
+        // Listen to the 'timeupdate' event to check the current playback time
+        const handleTimeUpdate = () => {
+          if (videoElement.currentTime >= stopAtSecond) {
+            videoElement.pause();  // Pause the video at the specified second
+            videoElement.currentTime = 0; // Reset the video to the start
+            videoElement.play(); // Optionally start the video again from the beginning
+          }
+        };
+  
+        videoElement.addEventListener("timeupdate", handleTimeUpdate);
+  
+        return () => {
+          videoElement.removeEventListener("timeupdate", handleTimeUpdate);
+        };
+      }
+    }, []);
 
   return (
     <section className="relative h-[720px] flex items-center justify-start overflow-hidden bg-black text-white">

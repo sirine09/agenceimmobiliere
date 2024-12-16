@@ -69,7 +69,7 @@ const PropertyDetail: React.FC<PropertyDetailProps> = ({
 
         <div className="mt-6 flex gap-4">
           <Link
-            href={`/contact`}
+            href={`/contactinscribed`}
             className="inline-block px-8 py-3 text-white bg-orange-600 hover:bg-orange-700 rounded-xl transition-all duration-300"
           >
             Contacter
